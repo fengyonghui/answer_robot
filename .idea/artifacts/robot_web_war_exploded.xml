@@ -28,7 +28,6 @@
           <element id="archive" name="robot_service-1.0-SNAPSHOT.jar">
             <element id="module-output" name="robot_service" />
           </element>
-          <element id="library" level="project" name="Maven: answer_robot:jcseg:1.8.2" />
           <element id="archive" name="robot_redis-1.0-SNAPSHOT.jar">
             <element id="module-output" name="robot_redis" />
           </element>

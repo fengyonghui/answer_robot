@@ -45,7 +45,6 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-jdbc:3.2.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-tx:3.2.4.RELEASE" level="project" />
     <orderEntry type="module" module-name="robot_service" />
-    <orderEntry type="library" name="Maven: answer_robot:jcseg:1.8.2" level="project" />
     <orderEntry type="module" module-name="robot_redis" />
     <orderEntry type="library" name="Maven: javax.servlet:servlet-api:2.5" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-jms:3.2.4.RELEASE" level="project" />
