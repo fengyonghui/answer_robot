@@ -1,0 +1,8 @@
+CJK_WORDS			=>CJK词语
+CJK_UNITS			=>中文单字单位
+MIXED_WORD			=>混合词汇，'B超'
+CN_LNAME			=>中文姓氏
+CN_SNAME			=>中文姓名单字		
+CN_DNAME_1			=>中文双子姓名首字
+CN_DNAME_2			=>中文双子姓名尾字
+CN_LNAME_ADORN		=>姓氏修饰昵称 例如：老陈

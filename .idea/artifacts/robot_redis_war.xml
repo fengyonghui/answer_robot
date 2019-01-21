@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="robot_redis:war">
+    <output-path>$PROJECT_DIR$/robot_redis/target</output-path>
+    <root id="archive" name="robot_redis.war">
+      <element id="artifact" artifact-name="robot_redis:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,67 @@
+jcseg中文分词系统
+
+core:
+	IWord.java 		chunk中的词接口
+	IDictionay.java	辞典接口
+	ISegment.java	分词算法接口
+	IConfig.java	JCSeg配置接口
+	IRule.java		过滤算法接口(mmseg目前主要有四种)
+	IChunk.java		mmseg核心概念(三词组合)
+	
+1.辞典
+Dictionary.java实现了IDictionary接口
+并且由DictionaryFacotry工厂产生IDiconary单例
+
+2.算法
+ASegment继承自ISegement
+并且实现了两种分词算法共用的方法
+
+SimpleSex.java和ComplexSeg.java分别继承了ASegment.java
+由SegmentFacotry工厂产生ISegment单例
+
+3.过滤规格
+MMRule.java		最大匹配
+LAWLRule.java	最大平均词长
+SVWLRule.java	最小词长方差
+LSWMFRule.java	最大单个词语素自由度之和
+均实现了IRule.java接口	
+
+4.分词过程：
+String str:研究生命起源
+(1).转换成char数组
+chars = str.toCharArray();
+(2).依据参数选择分词算法,(由SegmentFactory工厂负责)
+(3).切分过程,ASegment的next()方法返回下一个被切下的词,作为入口
+
+
+JCSeg字符分类
+1.Character.ORTHER_LETTER:
+	中文，日语，韩语正文
+2.Character.UPPERCASE_LETTER+Character.LOWERCASE_LETTER+Character.MODIFIER_LETTER
+	+Character.Unicode.BASIC_LATIN
+	俄文字母，希腊大小写字母，英文大小写字母，阿拉伯数字，英文标点符号
+3.Character.LETTER_NUMBER:
+	ⅠⅡ
+4.Character.OTHER_NUMBER:
+	①⑩⑽㈩
+5.Character.CJK_SYMBOLS_AND_PUNCTUATION+Character.GENERAL_PUNCTUATION+Character.HALFWIDTH_AND_FULLWIDTH_FORMS
+	CJK，Gneneral，全角/半角标点符号
+6.Other:
+	其他的无用字符
+	
+	
+测试环境：2.8GHZ/2G/Ubuntu
+Simple 模式：
+	1366058字/秒
+	3774.5KB/秒
+Complex 模式：
+	479338字/秒
+	1324.4KB/秒
+
+	
+功能完善：
+1.识别中英文混词(依赖词库lex-mixed)。									--done
+2.数字+单位中文词，例如2012年											--done
+3.中文姓名的识别(依赖姓氏词库，引入词性和规则来去除姓氏很双姓名的首字成词的情况)。	--done
+4.未登录词的识别。
+

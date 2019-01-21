@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/answer_robot.iml" filepath="$PROJECT_DIR$/answer_robot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dao_generator/dao_generator.iml" filepath="$PROJECT_DIR$/dao_generator/dao_generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jcseg/jcseg.iml" filepath="$PROJECT_DIR$/jcseg/jcseg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/robot_common/robot_common.iml" filepath="$PROJECT_DIR$/robot_common/robot_common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/robot_dao/robot_dao.iml" filepath="$PROJECT_DIR$/robot_dao/robot_dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/robot_redis/robot_redis.iml" filepath="$PROJECT_DIR$/robot_redis/robot_redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/robot_service/robot_service.iml" filepath="$PROJECT_DIR$/robot_service/robot_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/robot_web/robot_web.iml" filepath="$PROJECT_DIR$/robot_web/robot_web.iml" />
+    </modules>
+  </component>
+</project>
+

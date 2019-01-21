@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <!-- classPathEntry:数据库的JDBC驱动-->
+    <classPathEntry location="lib\mysql-connector-java-5.1.0-bin.jar" />
+    <context id="MysqlTables" targetRuntime="MyBatis3">
+        <!-- 取消自动生成的注释 -->
+        <commentGenerator>
+            <property name="suppressAllComments" value="true" />
+        </commentGenerator>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://192.168.2.33:3306/ide_demo?useUnicode=TRUE&amp;characterEncoding=utf8&amp;useCursorFetch=true&amp;defaultFetchSize=100"
+                        userId="root"
+                        password="root">
+        </jdbcConnection>
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+        <!-- targetProject:自动生成代码的位置 -->
+        <javaModelGenerator targetPackage="cn.mchina.demo.ide.idea.common.bean"
+                            targetProject="../demo_common/src/main/java">
+            <property name="enableSubPackages" value="true" />
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="sqlmap"
+                         targetProject="../demo_dao/src/main/resources">
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="XMLMAPPER"
+                             targetPackage="cn.mchina.demo.ide.idea.dao.mapper"
+                             targetProject="../demo_dao/src/main/java"
+                             implementationPackage="cn.mchina.demo.ide.idea.dao.mapper.impl"    >
+
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+        <!-- tableName:用于自动生成代码的数据库表；domainObjectName:对应于数据库表的javaBean类名 -->
+        <table schema="ide_demo" tableName="user"
+               domainObjectName="User">
+        </table>
+    </context>
+
+</generatorConfiguration>
